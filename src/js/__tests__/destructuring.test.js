@@ -35,7 +35,6 @@ test('should be array with two objects about four properties]', () => {
   expect(showOptionsAttacks(character)).toEqual(expected);
 });
 
-
 test('should be Error for non-existent property special', () => {
   const child = {
     name: 'Ребенок',

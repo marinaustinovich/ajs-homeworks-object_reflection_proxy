@@ -19,6 +19,7 @@ export default function orderByProps(obj, arrOrderForProps) {
     const keyB = b.key.toLowerCase();
     if (keyA < keyB) return -1;
     if (keyA > keyB) return 1;
+    return 0;
   });
 
   if (arrOrderForProps) {

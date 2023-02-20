@@ -1,5 +1,5 @@
 export default function showOptionsAttacks(obj) {
-  if (obj.hasOwnProperty('special')) {
+  if ('special' in obj) {
     const attacks = [];
     for (let i = 0; i < obj.special.length; i += 1) {
       const {
@@ -10,7 +10,6 @@ export default function showOptionsAttacks(obj) {
       });
     }
     return attacks;
-} else {
-    throw new Error('Нет доступных вариантов спец.атак для этого персонажа');
   }
+  throw new Error('Нет доступных вариантов спец.атак для этого персонажа');
 }
